@@ -14,6 +14,11 @@ header {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.logo img {
+    height: 40px; /* Adjust this value to make the logo smaller */
+    width: auto;  /* Ensures aspect ratio remains intact */
+}
+
 nav ul {
     list-style: none;
     margin: 0;
