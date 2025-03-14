@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Path to Career</title>
     <link rel="stylesheet" href="P10R.css">
+    <script defer src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </head>
 <body>
 <header>
-    <h1>Path to Career</h1>
+    <div class="logo">Path<span>Career</span></div>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -16,22 +18,31 @@
             <li><a href="#">PathFinder</a></li>
             <li><a href="#">Finance</a></li>
             <li><a href="#">Advisor</a></li>
+            <li><a href="#" class="active">P10R</a></li>
         </ul>
     </nav>
+    <div class="profile">
+        <i class="fas fa-bell"></i>
+        <i class="fas fa-question-circle"></i>
+        <div class="user-avatar"></div>
+    </div>
 </header>
 
 <main>
-    <section class="toolbar">
-        <button>Build Resume</button>
-        <button>Generate Cover Letter</button>
-        <button>Career Path</button>
-        <button>Skill Gap Analysis</button>
-        <button>Job Market Research</button>
-
-    </section>
     <section class="content">
-        <p>Welcome to Path to Career! Choose a tool to get started.</p>
+        <h2>Welcome to Path to Career</h2>
+        <p>Select a tool from the toolbar below to get started.</p>
     </section>
 </main>
+
+<footer class="toolbar">
+    <button id="resume"><i class="fas fa-file-alt"></i> Build Resume</button>
+    <button id="coverLetter"><i class="fas fa-envelope"></i> Generate Cover Letter</button>
+    <button id="careerPath"><i class="fas fa-signpost"></i> Career Path</button>
+    <button id="skillGap"><i class="fas fa-lightbulb"></i> Skill Gap Analysis</button>
+    <button id="jobResearch"><i class="fas fa-chart-pie"></i> Job Market Research</button>
+</footer>
+
+
 </body>
 </html>
