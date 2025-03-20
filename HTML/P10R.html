@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="P10R.css">
     <script defer src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -43,6 +44,23 @@
     <button id="jobResearch"><i class="fas fa-chart-pie"></i> Job Market Research</button>
 </footer>
 
+<!-- Chatbox Toggle Button -->
+<div class="chatbox-toggle" onclick="toggleChatbox()">Chat</div>
+
+<!-- Chatbox -->
+<div class="chatbox" id="chatbox">
+    <div class="chatbox-header">
+        Chatbox
+        <span class="close-btn" onclick="toggleChatbox()">×</span>
+    </div>
+    <div class="chatbox-body" id="chatbox-body">
+        <p>Welcome! How can I help you?</p>
+    </div>
+    <div class="chatbox-footer">
+        <input type="text" id="chat-input" placeholder="Type a message..." onkeypress="sendMessage(event)">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
 
 </body>
 </html>
