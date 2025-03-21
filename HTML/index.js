@@ -25,36 +25,37 @@ document.addEventListener("DOMContentLoaded", function () {
         alert(message);
     }
 
+    });
+
 // Function to toggle chatbox visibility
-    function toggleChatbox() {
-        var chatbox = document.getElementById("chatbox");
-        if (chatbox.style.display === "none" || chatbox.style.display === "") {
-            chatbox.style.display = "flex";
-        } else {
-            chatbox.style.display = "none";
-        }
+function toggleChatbox() {
+    var chatbox = document.getElementById("chatbox");
+    if (chatbox.style.display === "none" || chatbox.style.display === "") {
+        chatbox.style.display = "flex";
+    } else {
+        chatbox.style.display = "none";
     }
+}
 
 // Function to send message
-    function sendMessage(event) {
-        if (event && event.key !== "Enter") return; // Only send on Enter key
+function sendMessage(event) {
+    if (event && event.key !== "Enter") return; // Only send on Enter key
 
-        var input = document.getElementById("chat-input");
-        var message = input.value.trim();
-        if (message === "") return;
+    var input = document.getElementById("chat-input");
+    var message = input.value.trim();
+    if (message === "") return;
 
-        var chatboxBody = document.getElementById("chatbox-body");
-        var newMessage = document.createElement("p");
-        newMessage.textContent = "You: " + message;
-        chatboxBody.appendChild(newMessage);
+    var chatboxBody = document.getElementById("chatbox-body");
+    var newMessage = document.createElement("p");
+    newMessage.textContent = "You: " + message;
+    chatboxBody.appendChild(newMessage);
 
-        input.value = ""; // Clear input
-        chatboxBody.scrollTop = chatboxBody.scrollHeight; // Auto-scroll
-    }
+    input.value = ""; // Clear input
+    chatboxBody.scrollTop = chatboxBody.scrollHeight; // Auto-scroll
+}
 
-    // Attach click event to all buttons
-    document.querySelectorAll(".toolbar button").forEach(button => {
-        button.addEventListener("click", handleClick);
-    });
+// Attach click event to all buttons
+document.querySelectorAll(".toolbar button").forEach(button => {
+    button.addEventListener("click", handleClick);
 });
 
