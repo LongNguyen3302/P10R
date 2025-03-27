@@ -13,15 +13,19 @@ header {
     align-items: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
-
+.logo {
+    margin-right: 20px;
+}
 .logo img {
     height: 40px; /* Adjust this value to make the logo smaller */
     width: auto;  /* Ensures aspect ratio remains intact */
 }
-
+header nav{
+    flex-grow: 4;
+}
 nav ul {
     list-style: none;
-    margin: 0;
+    margin: 5px;
     padding: 0;
     display: flex;
 }
@@ -32,10 +36,15 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 }
-
+a.active {
+    color: #5D9F92; /* Change to the exact greenish color */
+    font-weight: bold; /* Matches the style from the image */
+    font-family: 'Poppins', sans-serif;
+}
 .toolbar {
     display: flex;
     justify-content: center;
@@ -60,4 +69,254 @@ nav ul li a {
 .content {
     text-align: center;
     padding: 20px;
+}
+
+/*.chatbox {*/
+/*    position: fixed;*/
+/*    bottom: 80px;*/
+/*    right: 20px;*/
+/*    width: 350px;*/
+/*    background: white;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);*/
+/*    display: none;*/
+/*    flex-direction: column;*/
+/*    overflow: hidden;*/
+/*    transition: all 0.3s ease-in-out;*/
+/*}*/
+
+/*!* Chatbox Header *!*/
+/*.chatbox-header {*/
+/*    background: white;*/
+/*    color: black;*/
+/*    padding: 15px;*/
+/*    text-align: center;*/
+/*    font-weight: bold;*/
+/*    border-bottom: 1px solid #ddd;*/
+/*    position: relative;*/
+/*}*/
+
+/*!* Close Button *!*/
+/*.close-btn {*/
+/*    position: absolute;*/
+/*    right: 15px;*/
+/*    top: 10px;*/
+/*    cursor: pointer;*/
+/*    font-size: 20px;*/
+/*    color: gray;*/
+/*}*/
+
+/*!* Chatbox Body *!*/
+/*.chatbox-body {*/
+/*    height: 250px;*/
+/*    padding: 10px;*/
+/*    overflow-y: auto;*/
+/*    background: #f9f9f9;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*!* Chat Messages *!*/
+/*.chat-message {*/
+/*    max-width: 80%;*/
+/*    padding: 10px;*/
+/*    border-radius: 10px;*/
+/*    margin-bottom: 10px;*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*.user-message {*/
+/*    background: #5D9F92;*/
+/*    color: white;*/
+/*    align-self: flex-end;*/
+/*    border-radius: 15px 15px 0 15px;*/
+/*}*/
+
+/*.bot-message {*/
+/*    background: #e5e5e5;*/
+/*    color: black;*/
+/*    align-self: flex-start;*/
+/*    border-radius: 15px 15px 15px 0;*/
+/*}*/
+
+/*!* Chatbox Footer *!*/
+/*.chatbox-footer {*/
+/*    display: flex;*/
+/*    padding: 10px;*/
+/*    background: #fff;*/
+/*    border-top: 1px solid #ddd;*/
+/*}*/
+
+/*.chatbox-footer input {*/
+/*    flex: 1;*/
+/*    padding: 8px;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 5px;*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*.chatbox-footer button {*/
+/*    background: #5D9F92;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 8px 12px;*/
+/*    margin-left: 5px;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*!* Chatbox Toggle Button *!*/
+/*.chatbox-toggle {*/
+/*    position: fixed;*/
+/*    bottom: 20px;*/
+/*    right: 20px;*/
+/*    background-color: #5D9F92;*/
+/*    color: white;*/
+/*    padding: 12px 18px;*/
+/*    border-radius: 30px;*/
+/*    cursor: pointer;*/
+/*    font-weight: bold;*/
+/*    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);*/
+/*}*/
+/* General Styles */
+/* General Styles */
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Chatbox */
+.chatbox {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 380px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Chatbox Header */
+.chatbox-header {
+    background: white;
+    color: black;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.chatbox-header input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background: #f1f1f1;
+    border-radius: 15px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Chatbox Body */
+.chatbox-body {
+    height: 350px;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Messages */
+.chat-message {
+    max-width: 75%;
+    padding: 12px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.user-message {
+    background: white;
+    color: black;
+    align-self: flex-end;
+    border-radius: 20px 20px 0 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bot-message {
+    background: #eef2f6;
+    color: black;
+    align-self: flex-start;
+    border-radius: 20px 20px 20px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.bot-message img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Date Separator */
+.chat-date {
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+    margin: 10px 0;
+}
+
+/* Chatbox Footer */
+.chatbox-footer {
+    display: flex;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.chatbox-footer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+.chatbox-footer button {
+    background: #5D9F92;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Chatbox Toggle Button */
+.chatbox-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5D9F92;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
