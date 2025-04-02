@@ -278,3 +278,35 @@ footer.toolbar div {
 .chatbox-toggle.active + .highlight-line {
     width: 100%; /* Show highlight line when button is active */
 }
+.toolbar {
+    position: fixed;
+    bottom: 20px; /* Add some space from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the toolbar */
+    width: auto; /* Adjust width based on content */
+    padding: 15px 30px;
+    background: #fff;
+    border-radius: 15px; /* Rounded corners for floating effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Floating shadow effect */
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+
+.toolbar button {
+    background: white; /* White button */
+    color: black;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar button:hover {
+    background: #f0f0f0; /* Light gray on hover */
+}
+
+
+
